@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Mepandes - Gus Arif Putra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll">
+
+    <audio id="invitation-audio" src="music.mp3" loop></audio>
+
+    <div id="cover-page">
+        <div class="cover-content">
+            <p class="top-title">UNDANGAN METATAH/MEPANDES</p>
+            <h1 class="cover-names">Gus Arif Putra</h1>
+            <div class="guest-box">
+                <p>Kepada Bapak/Ibu/Saudara/i:</p>
+                <h3 id="guest-name">Tamu Undangan</h3>
+            </div>
+            <button class="btn-open" onclick="openInvitation()">BUKA UNDANGAN</button>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <section class="welcome-section fade-in">
+            <div class="aksara-bali-text">
+                ᬒᬁᬲᬩᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ
+            </div>
+            <p class="top-title">UPACARA MANUSA YADNYA MEPANDES/METATAH</p>
+            <div class="divider"></div>
+            <div class="sloka-box">
+                <p class="sloka-bali">"Devan bhavayatanena te deva bhavayantu vah parasparam bhavayantah sreyah param avapsyatha"</p>
+                <p class="sloka-ref">(Bhagavad Gita 3:11)</p>
+                <p class="translation">"Dengan ini (Yadnya), kami berbakti kepada Hyang Widhi dan dengan ini pula Hyang Widhi memelihara dan mengasihi kamu. Dengan saling memelihara satu sama lain, kamu akan mencapai kebaikan yang maha tinggi."</p>
+            </div>
+            <div class="divider"></div>
+        </section>
+
+        <section class="profile-section fade-in">
+            <div class="profile-card-container">
+                <div class="profile-card-bg">
+                    <img src="arif.jpeg" alt="Gus Arif Putra" class="profile-card-img">
+                    <div class="profile-card-overlay"></div>
+                    <div class="profile-card-content">
+                        <h1 class="main-name">Gus Arif Putra</h1>
+                        <a href="https://www.instagram.com/gus_arif_putra/" target="_blank" class="ig-link">@gus_arif_putra</a>
+                        <div class="parents-info">
+                            <p>Putra dari pasangan:</p>
+                            <p><strong>I Wayan Surta (Almarhum)</strong></p>
+                            <p>&</p>
+                            <p><strong>Ida Ayu Ketut Ngurah Wati</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="details-section fade-in">
+            <div class="divider"></div>
+            <h2>Waktu & Lokasi</h2>
+            <p class="event-date">Selasa, 9 Juni 2026</p>
+            <p class="event-time">11.00 - 17.00 WITA</p>
+            <p class="event-location">Banjar Griya Cucukan</p>
+            <a href="https://maps.app.goo.gl/jz1vmN6ZbwASh6P87" target="_blank" class="btn-map">LIHAT GOOGLE MAPS</a>
+
+            <div id="countdown">
+                <div class="count-box"><span id="days">00</span><p>Hari</p></div>
+                <div class="count-box"><span id="hours">00</span><p>Jam</p></div>
+                <div class="count-box"><span id="mins">00</span><p>Menit</p></div>
+                <div class="count-box"><span id="secs">00</span><p>Detik</p></div>
+            </div>
+        </section>
+
+        <section class="gift-section fade-in">
+            <div class="divider"></div>
+            <h2>Kado Online</h2>
+            <p>Tanpa mengurangi rasa hormat, bagi Anda yang ingin memberikan tanda kasih dapat melalui:</p>
+            <div class="bank-card">
+                <p><strong>BANK BNI</strong></p>
+                <p class="account-number">0680824625</p>
+                <p>a.n Gus Arif Putra</p>
+            </div>
+        </section>
+
+        <section class="wishes-section fade-in">
+            <div class="divider"></div>
+            <h2>Ucapan & Doa</h2>
+            <p>Tuliskan ucapan dan doa restu Anda:</p>
+            <form class="wish-form" id="form-ucapan">
+                <input type="text" id="input-nama" placeholder="Nama Anda" required>
+                <textarea id="input-ucapan" placeholder="Tulis Ucapan & Doa..." rows="4" required></textarea>
+                <button type="submit" class="btn-map">KIRIM UCAPAN</button>
+            </form>
+            <div id="wishes-container"></div>
+        </section>
+
+        <footer class="fade-in">
+            <p>Merupakan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+            <p>Kami yang berbahagia,</p>
+            <h3>Keluarga Besar I Wayan Surta (Alm)</h3>
+            <br>
+            <p class="shanti">Om Shanti, Shanti, Shanti, Om</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
