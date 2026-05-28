@@ -577,3 +577,41 @@ body .fade-in.visible {
     }
 }
 
+/* --- 16. GALLERY PHOTO GRID --- */
+.gallery-section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.photo-grid {
+    display: flex;
+    gap: 12px;               /* Jarak antar foto kiri dan kanan */
+    width: 90%;             /* Mengikuti standard lebar boxy kado online */
+    max-width: 340px;        /* Mengunci batas maksimal agar pas di layar desktop/HP */
+    margin: 20px auto 0 auto;
+    box-sizing: border-box;
+}
+
+.photo-item {
+    flex: 1;                 /* Membagi ruang 50:50 secara adil */
+    aspect-ratio: 1 / 1;     /* Memaksa foto berbentuk kotak persegi (square) */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;      /* Menyelaraskan kelengkungan border-radius dengan .bank-card */
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Memotong foto secara proporsional agar tidak gepeng */
+    object-position: center; /* Fokus potongan di tengah-tengah foto */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Efek zoom interaktif saat foto disentuh/di-hover */
+.photo-item:hover img {
+    transform: scale(1.05);
+}
