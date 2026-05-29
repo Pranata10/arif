@@ -8,14 +8,22 @@
     box-sizing: border-box; 
 }
 
-body { 
-    background-color: #0f0f0f; 
-    color: #e0e0e0; 
-    font-family: 'Lora', serif; 
-    line-height: 1.6; 
-    text-align: center; 
-    overflow-x: hidden; 
+html {
+    width: 100%;
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: 100dvh;
+    box-sizing: border-box;
 }
+
+    body { 
+        background-color: #0f0f0f; 
+        color: #e0e0e0; 
+        font-family: 'Lora', serif; 
+        line-height: 1.6; 
+        text-align: center; 
+        overflow-x: hidden; 
+    }
 
 h1, h2, h3 { 
     font-family: 'Playfair Display', serif; 
@@ -44,7 +52,9 @@ body.no-scroll {
     top: 0; 
     left: 0; 
     width: 100%; 
-    height: 100vh; 
+    height: 100vh;
+    height: -webkit-fill-available; /* Trik khusus Safari agar pas dengan layar HP */
+    height: 100dvh;
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2070');
     background-size: cover; 
     background-position: center;
