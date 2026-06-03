@@ -112,3 +112,34 @@ function dapatkanNamaTamu() {
 
 // Jalankan fungsi ambil nama segera setelah halaman dimuat
 window.addEventListener('DOMContentLoaded', dapatkanNamaTamu);
+
+document.addEventListener("DOMContentLoaded", function () {
+    // ... (Kode Intersection Observer dari langkah sebelumnya tetap biarkan di sini) ...
+
+    // Ambil elemen-elemen modal
+    const modal = document.getElementById("photoModal");
+    const modalImg = document.getElementById("imgFullSize");
+    const closeBtn = document.querySelector(".close-btn");
+    const photoItems = document.querySelectorAll(".photo-item img");
+
+    // Tangani event klik pada setiap foto di dalam grid
+    photoItems.forEach(img => {
+        img.addEventListener("click", function () {
+            modal.classList.add("open"); // Buka modal
+            modalImg.src = this.src;     // Salin file gambar ke modal
+            modalImg.alt = this.alt;     // Salin teks alt ke modal
+        });
+    });
+
+    // Tangani klik tombol (X) untuk menutup modal
+    closeBtn.addEventListener("click", function () {
+        modal.classList.remove("open");
+    });
+
+    // Tangani klik di area luar foto (latar belakang hitam) untuk menutup modal
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.classList.remove("open");
+        }
+    });
+});
